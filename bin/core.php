@@ -27,9 +27,19 @@ function _decrypt($ivHashCiphertext, $password)
     return openssl_decrypt($ciphertext, $method, $key, OPENSSL_RAW_DATA, $iv);
 }
 
-echo 'Encrypted: ';
-echo $encrypted = _encrypt('<?php phpinfo();', 'password');
-echo PHP_EOL;
-echo 'Decrypted: ';
-echo $decrypted = _decrypt($encrypted, 'password');
-echo PHP_EOL;
+function _generate($pass, $str)
+{
+    echo 'Encrypted: ';
+    // echo $encrypted = _encrypt('<?php echo "<h1>Hello World!</h1>\n"; ', $pass);
+    // echo $encrypted = _encrypt('<?php phpinfo(); ', $pass);
+    echo $encrypted = _encrypt($str, $pass);
+    echo PHP_EOL;
+    echo 'Decrypted: ';
+    echo $decrypted = _decrypt($encrypted, $pass);
+    echo PHP_EOL;
+}
+
+function _run($str)
+{
+    eval('?>' . _decrypt($str, 'password') . '');
+}
