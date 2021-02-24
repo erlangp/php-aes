@@ -9,6 +9,11 @@
             "email": "erlangparasu@gmail.com"
         }
     ],
+    "autoload": {
+        "files": [
+            "src/core.php"
+        ]
+    },
     "minimum-stability": "stable",
     "require": {}
 }
