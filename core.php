@@ -30,16 +30,9 @@ function _decrypt($ivHashCiphertext, $password)
 function _generate($pass, $str)
 {
     echo 'Encrypted: ';
-    // echo $encrypted = _encrypt('<?php echo "<h1>Hello World!</h1>\n"; ', $pass);
-    // echo $encrypted = _encrypt('<?php phpinfo(); ', $pass);
     echo $encrypted = _encrypt($str, $pass);
     echo PHP_EOL;
     echo 'Decrypted: ';
     echo $decrypted = _decrypt($encrypted, $pass);
     echo PHP_EOL;
-}
-
-function _run($str)
-{
-    eval('?>' . _decrypt($str, 'password') . '<?php;');
 }
