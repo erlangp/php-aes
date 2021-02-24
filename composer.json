@@ -1,0 +1,14 @@
+{
+    "name": "erlangp/php-aes",
+    "description": "PHP AES encrypt and decrypt",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erlang Parasu",
+            "email": "erlangparasu@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
