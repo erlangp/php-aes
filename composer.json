@@ -1,5 +1,5 @@
 {
-    "name": "erlangp/php-aes",
+    "name": "erlangparasu/php-aes",
     "description": "PHP AES encrypt and decrypt",
     "type": "library",
     "license": "MIT",
@@ -15,5 +15,8 @@
         ]
     },
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "ext-mbstring": "*",
+        "ext-openssl": "*"
+    }
 }
